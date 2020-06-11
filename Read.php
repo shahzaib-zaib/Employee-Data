@@ -40,7 +40,7 @@
                 <td>". $records['EmpQualitfication'] ."</td>
                 <td>". $records['EmpSalary'] ."</td>
                 <td><a href='Delete.php?Id=$records[EmailId]'>Delete</a></td>
-                <td><a href='Edit.php?Id=$records[EmailId]&name=$records[EmpName]&email=$records[EmpEmail]&gen=$records[EmpGender]&num=$records[EmpPhoneNumber]&qual=$records[EmpQualitfication]&sal=$records[EmpSalary]'>Edit</a></td>
+                <td><a href='Edit.php?Id=$records[EmailId]'>Edit</a></td>
 
             </tr>";
 
