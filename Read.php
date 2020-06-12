@@ -39,8 +39,8 @@
                 <td>". $records['EmpPhoneNumber'] ."</td>
                 <td>". $records['EmpQualitfication'] ."</td>
                 <td>". $records['EmpSalary'] ."</td>
-                <td><a href='Delete.php?Id=$records[EmailId]'>Delete</a></td>
-                <td><a href='Edit.php?Id=$records[EmailId]'>Edit</a></td>
+                <td><a href='Delete.php?Id=$records[EmpId]'>Delete</a></td>
+                <td><a href='Edit.php?Id=$records[EmpId]'>Edit</a></td>
 
             </tr>";
 
