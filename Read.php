@@ -8,7 +8,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
 <?php
 
-    $con = mysqli_connect('localhost:3306', 'root', '', 'companydb');
+    $con = mysqli_connect('localhost:8080', 'root', '', 'companydb');
     $fetch_query = "select * from employee";
     if(isset($_GET['btn'])){
         $searchrecord = $_GET['searchtxt'];
@@ -17,10 +17,10 @@
             $fetch_query = "select * from amployee where EmpId = '$searchrecord'";
         }
         else if($option == "name"){
-            $fetch_query = "select * from amployee where EmpName like '$searchrecord'";
+            $fetch_query = "select * from amployee where EmpName like '$searchrecord%'";
         }
         else if($option == "email"){
-            $fetch_query = "select * from amployee where EmpEmail = '$searchrecord'";
+            $fetch_query = "select * from amployee where EmpEmail like '%$searchrecord%'";
         }
         else if($option == "gender"){
             $fetch_query = "select * from amployee where EmpGender = '$searchrecord'";
