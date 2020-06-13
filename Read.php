@@ -8,8 +8,27 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
 <?php
 
-    $con = mysqli_connect('localhost:3308', 'root', '', 'companydb');
+    $con = mysqli_connect('localhost:3306', 'root', '', 'companydb');
     $fetch_query = "select * from employee";
+    if(isset($_GET['btn'])){
+        $searchrecord = $_GET['searchtxt'];
+        $option = $_GET['search'];
+        if($option == "id"){
+            $fetch_query = "select * from amployee where EmpId = '$searchrecord'";
+        }
+        else if($option == "name"){
+            $fetch_query = "select * from amployee where EmpName like '$searchrecord'";
+        }
+        else if($option == "email"){
+            $fetch_query = "select * from amployee where EmpEmail = '$searchrecord'";
+        }
+        else if($option == "gender"){
+            $fetch_query = "select * from amployee where EmpGender = '$searchrecord'";
+        }
+        else if($option == "qual"){
+            $fetch_query = "select * from amployee where EmpQualitfication = '$searchrecord'";
+        }
+    }
     $execute = mysqli_query($con, $fetch_query);
     $totalrows = mysqli_num_rows($execute);
 

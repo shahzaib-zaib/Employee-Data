@@ -1,6 +1,6 @@
 <?php
 
-    $con = mysqli_connect('localhost:3308', 'root', '', 'companydb');
+    $con = mysqli_connect('localhost:3306', 'root', '', 'companydb');
     $id = $_GET['id'];
     $delete_query = "delete FROM employee WHERE EmpId = $id";
     $execute = mysqli_query($con, $delete_query);

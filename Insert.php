@@ -1,6 +1,6 @@
 <?php
 
-        $con = mysqli_connect("localhost:3306", "", "", "companydb");
+        $con = mysqli_connect("localhost:3306", "root", "", "companydb");
         if (isset($_POST["savebtn"])) {
             $name = $_POST["name"];
             $email = $_POST["email"];

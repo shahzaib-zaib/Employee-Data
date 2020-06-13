@@ -8,7 +8,7 @@
 <body>
     <?php
 
-        $con = mysqli_connect('localhost:3308', 'root', '', 'companydb');
+        $con = mysqli_connect('localhost:3306', 'root', '', 'companydb');
         $employeeId = $_GET['Id'];
         $fetch_query = "select * from employee where empId = $employeeId";
         $execute = mysqli_query($con, $fetch_query);
